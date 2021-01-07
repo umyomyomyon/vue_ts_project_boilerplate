@@ -35,6 +35,7 @@
 
     <v-main>
       <HelloWorld />
+      <Comp :text="'親コンポーネントからやってまいりました'" />
     </v-main>
   </v-app>
 </template>
@@ -42,12 +43,14 @@
 <script lang="ts">
 import Vue from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
+import Comp from "./components/Comp.vue";
 
 export default Vue.extend({
   name: "App",
 
   components: {
-    HelloWorld
+    HelloWorld,
+    Comp
   },
 
   data: () => ({
